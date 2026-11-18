@@ -1,0 +1,9 @@
+{
+  "name": "DEVICE X \u2014 Tech Explorer",
+  "short_name": "DEVICE X",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#f5f7fb",
+  "icons": []
+}

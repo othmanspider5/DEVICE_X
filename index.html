@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="DEVICE X — explore and compare phones, computers, tablets and PC components.">
+  <title>DEVICE X — Tech Explorer</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="DEVICE X home"><span class="brand-mark">D<span>X</span></span><span>DEVICE <b>X</b><small>TECH EXPLORER</small></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <button class="nav-link active" data-view="explore"><span>⌕</span> Explore devices</button>
+      <button class="nav-link" data-view="compare"><span>⇄</span> Compare <em id="compareCount">0</em></button>
+      <button class="nav-link" data-view="favorites"><span>♡</span> Favorites</button>
+      <div class="side-label categories-label">CATEGORIES</div>
+      <button class="category-link" data-category="All"><i>◫</i> All devices</button>
+      <button class="category-link" data-category="Smartphone"><i>▯</i> Smartphones</button>
+      <button class="category-link" data-category="Laptop"><i>▱</i> Laptops</button>
+      <button class="category-link" data-category="Tablet"><i>▭</i> Tablets</button>
+      <button class="category-link" data-category="Desktop"><i>▣</i> Desktop PCs</button>
+      <button class="category-link" data-category="Component"><i>⌘</i> PC components</button>
+      <div class="sidebar-bottom">
+        <div class="mini-card"><span class="mini-icon">✦</span><b>Know your tech.</b><p>Clear specs. Smarter choices.</p></div>
+        <span class="credit">CREATED BY<br><b>OTHMAN LAMMALLAH</b></span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="crumb">Workspace <span>/</span> <b id="crumbName">Explore</b></div>
+        <div class="top-actions"><span class="status-dot"></span><span class="status-text">DEVICE DATABASE</span><button class="avatar" title="DEVICE X">DX</button></div>
+      </header>
+
+      <section class="page" id="exploreView">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span></span> THE TECH KNOWLEDGE BASE</div>
+            <h1>Every device.<br><span>Every detail.</span></h1>
+            <p>Explore specifications, discover devices and compare the technology that powers your world.</p>
+            <div class="hero-search">
+              <span>⌕</span><input id="searchInput" type="search" placeholder="Search iPhone, HP, Samsung, processor..." autocomplete="off">
+              <kbd>SEARCH</kbd>
+            </div>
+            <div class="quick-tags"><span>Try:</span><button data-query="iPhone">iPhone</button><button data-query="Samsung">Samsung</button><button data-query="HP">HP</button></div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="device device-phone"><div class="phone-screen"><div class="screen-island"></div><div class="screen-glow"></div></div></div>
+            <div class="device device-laptop"><div class="laptop-screen"><div class="laptop-wall"></div></div><div class="laptop-base"></div></div>
+            <div class="floating-chip">A19 PRO <small>CHIPSET</small></div>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <div><div class="eyebrow muted">BROWSE LIBRARY</div><h2>Explore devices</h2><p class="section-sub">Find the technical details that matter.</p></div>
+          <div class="result-count" id="resultCount">0 devices</div>
+        </div>
+        <div class="filters">
+          <div class="filter-tabs" id="filterTabs">
+            <button class="filter active" data-category="All">All</button><button class="filter" data-category="Smartphone">Smartphones</button><button class="filter" data-category="Laptop">Laptops</button><button class="filter" data-category="Tablet">Tablets</button><button class="filter" data-category="Desktop">Desktops</button><button class="filter" data-category="Component">Components</button>
+          </div>
+          <select id="brandFilter" aria-label="Filter by brand"><option value="All">All brands</option></select>
+        </div>
+        <div class="device-grid" id="deviceGrid"></div>
+        <div class="empty-state hidden" id="emptyState"><div>⌕</div><h3>No devices found</h3><p>Try another name or clear your filters.</p><button class="primary-btn" id="clearFilters">Clear filters</button></div>
+        <div class="database-note"><span>ⓘ</span><p><b>About this database</b><br>This starter library contains verified example entries. Exact configurations can vary by region, model number and seller. Each device page links to its source. The library is designed to grow with additional verified records.</p></div>
+      </section>
+
+      <section class="page hidden" id="compareView">
+        <div class="page-title"><div class="eyebrow muted">SIDE-BY-SIDE ANALYSIS</div><h1>Compare devices<span>.</span></h1><p>Select up to three devices from Explore to compare their specifications.</p></div>
+        <div id="compareContent"></div>
+      </section>
+
+      <section class="page hidden" id="favoritesView">
+        <div class="page-title"><div class="eyebrow muted">YOUR COLLECTION</div><h1>Saved devices<span>.</span></h1><p>Your favorite devices, all in one place.</p></div>
+        <div class="device-grid" id="favoriteGrid"></div>
+        <div class="empty-state" id="favoriteEmpty"><div>♡</div><h3>No favorites yet</h3><p>Save a device using the heart icon on any device card.</p><button class="primary-btn" data-goto="explore">Explore devices</button></div>
+      </section>
+
+      <footer><span>DEVICE X <b>© 2026</b></span><span>BUILT FOR THE CURIOUS.</span></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="detail-modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="detail-top"><div class="detail-icon" id="detailIcon">📱</div><div><div class="eyebrow muted" id="detailBrand">BRAND</div><h2 id="modalTitle">Device name</h2><p id="detailSummary"></p></div></div>
+      <div class="detail-pills"><span id="detailCategory"></span><span id="detailYear"></span><span id="detailTag"></span></div>
+      <div class="spec-heading">TECHNICAL SPECIFICATIONS <span>OFFICIAL / REFERENCED DATA</span></div>
+      <div class="spec-list" id="specList"></div>
+      <div class="source-box"><b>Source & verification</b><p id="sourceNote"></p><a id="sourceLink" href="#" target="_blank" rel="noopener">Open manufacturer source ↗</a></div>
+      <div class="modal-actions"><button class="secondary-btn" id="modalFavorite">♡ Save</button><button class="primary-btn" id="modalCompare">⇄ Add to compare</button></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

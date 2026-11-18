@@ -1,0 +1,81 @@
+[
+  {
+    "id": "apple-iphone-17-pro",
+    "name": "iPhone 17 Pro",
+    "brand": "Apple",
+    "category": "Smartphone",
+    "year": 2025,
+    "image": "📱",
+    "tag": "Pro smartphone",
+    "summary": "Apple's 2025 Pro iPhone with the A19 Pro chip and a 6.3-inch OLED display.",
+    "specs": {
+      "Processor": "Apple A19 Pro",
+      "CPU": "6-core CPU (2 performance + 4 efficiency cores)",
+      "GPU": "6-core GPU with Neural Accelerators",
+      "Neural Engine": "16-core Neural Engine",
+      "RAM": "Not specified on the official tech-spec page",
+      "Storage": "256GB / 512GB / 1TB",
+      "Display": "6.3-inch Super Retina XDR OLED",
+      "Resolution": "2622 × 1206 pixels at 460 ppi",
+      "Refresh rate": "ProMotion up to 120Hz",
+      "Rear cameras": "48MP Main + 48MP Ultra Wide + 48MP Telephoto",
+      "Front camera": "18MP Center Stage",
+      "Operating system": "iOS 26 at launch",
+      "Connectivity": "5G, Wi‑Fi, Bluetooth (regional details vary)",
+      "Water resistance": "IP68 (lab rating; conditions apply)"
+    },
+    "sourceLabel": "Apple Support — iPhone 17 Pro Tech Specs",
+    "sourceUrl": "https://support.apple.com/en-us/125090",
+    "sourceNote": "Official Apple specifications. RAM is not listed on the official spec page."
+  },
+  {
+    "id": "samsung-galaxy-s26-ultra",
+    "name": "Galaxy S26 Ultra",
+    "brand": "Samsung",
+    "category": "Smartphone",
+    "year": 2026,
+    "image": "📱",
+    "tag": "Android flagship",
+    "summary": "Samsung flagship with a 6.9-inch Dynamic AMOLED 2X display and Snapdragon 8 Elite Gen 5 for Galaxy.",
+    "specs": {
+      "Processor": "Snapdragon 8 Elite Gen 5 for Galaxy",
+      "CPU": "Octa-core",
+      "RAM": "12GB / 16GB (market and storage configuration dependent)",
+      "Storage": "256GB / 512GB / 1TB (market dependent)",
+      "Display": "6.9-inch Dynamic AMOLED 2X",
+      "Resolution": "3120 × 1440 (QHD+)",
+      "Refresh rate": "Adaptive 1–120Hz",
+      "Rear cameras": "200MP Main + 50MP Ultra Wide + 50MP Telephoto + 10MP Telephoto",
+      "Front camera": "12MP",
+      "Operating system": "Android 16 at launch",
+      "Weight": "214g",
+      "S Pen": "Supported"
+    },
+    "sourceLabel": "Samsung Newsroom — Galaxy S26 series specifications",
+    "sourceUrl": "https://news.samsung.com/uk/samsung-unveils-galaxy-s26-series-the-most-intuitive-galaxy-ai-phone-yet",
+    "sourceNote": "Official Samsung regional launch information; memory and storage availability can vary by market."
+  },
+  {
+    "id": "hp-elitebook-840-g6",
+    "name": "EliteBook 840 G6",
+    "brand": "HP",
+    "category": "Laptop",
+    "year": 2019,
+    "image": "💻",
+    "tag": "Business laptop",
+    "summary": "14-inch business notebook. HP sold it in several CPU, display, memory and storage configurations.",
+    "specs": {
+      "Processor options": "Intel Core i5-8265U / i5-8365U / i7-8565U / i7-8665U (configuration dependent)",
+      "Graphics": "Intel UHD Graphics 620 on listed CPU configurations",
+      "CPU cores": "4 cores on listed CPU configurations",
+      "RAM": "Up to 32GB DDR4-2400 (2 SODIMM slots)",
+      "Storage": "Multiple M.2 SSD options; configuration dependent",
+      "Display": "14-inch; HD/FHD/UHD options depending on configuration",
+      "Operating system": "Originally offered with Windows 10 variants and other options",
+      "Important": "Exact specifications depend on the individual laptop configuration."
+    },
+    "sourceLabel": "HP — EliteBook 840 G6 Data Sheet",
+    "sourceUrl": "https://cdn.cs.1worldsync.com/syndication/feeds/hp/inline-content/AN/3/A/A/1/B/3AA1B03B1EF885C0E5251E36F38258BF55957602_source.PDF",
+    "sourceNote": "HP product data sheet. This model has multiple factory configurations; verify the exact SKU before buying or upgrading."
+  }
+]
